@@ -12,11 +12,11 @@ router.post("/register", async (req, res) => {
   var firstHash = getFirstHash(req.body.masterPassword, salt);
   var secondHash = getSecondHash(firstHash, salt);
   var key = CryptoJS.lib.WordArray.random(128 / 8).toString();
-  var encryptionKey = encryptPassword(firstHash, key);
+  var encryptedPassword = encryptPassword(firstHash, key);
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
-    encryptionKey: encryptedPassword,
+    masterPassword: encryptedPassword,
     authenticationHash: secondHash,
     key: key,
   });
