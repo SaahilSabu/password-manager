@@ -7,10 +7,10 @@ window.addEventListener("load", () => {
   const token = localStorage.getItem("jwt");
 
   if (token) {
-    location.href = "/pages/dashboard/dashboard.html";
+    location.href = "./pages/dashboard/dashboard.html";
   }
 });
 
 signInSignUpButton.addEventListener("click", () => {
-  location.href = "/pages/signInsignUp/authenticate.html";
+  location.href = "./pages/signInsignUp/authenticate.html";
 });

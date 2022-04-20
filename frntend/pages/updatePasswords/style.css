@@ -22,7 +22,7 @@ body {
   opacity: 1;
 }
 
-.create-notes-container {
+.create-passwords-container {
   width: 300px;
   height: 350px;
   padding: 20px;
@@ -42,17 +42,7 @@ body {
   font-size: 30px;
 }
 
-.create-note-input {
-  border: none;
-  height: 50%;
-  width: 90%;
-  border-radius: 15px;
-  color: black;
-  padding: 10px;
-  text-align: center;
-}
-
-.create-note-heading {
+.create-password-input {
   border: none;
   height: 10%;
   width: 90%;
@@ -62,12 +52,32 @@ body {
   text-align: center;
 }
 
-.create-note-input:focus,
-.create-note-heading:focus {
+.create-password-heading {
+  border: none;
+  height: 10%;
+  width: 90%;
+  border-radius: 15px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+.create-password-password {
+  border: none;
+  height: 10%;
+  width: 90%;
+  border-radius: 15px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.create-password-input:focus,
+.create-password-heading:focus
+.create-password-password:focus {
   outline: none;
 }
 
-.create-note-button {
+.create-password-button {
   background: transparent;
   padding: 10px;
   border-radius: 15px;

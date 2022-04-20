@@ -11,6 +11,7 @@ const signInForm = document.querySelector(".signin-form");
 signInForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  location.href = "../dashboard/dashboard.html";
   const signInUsername = document.querySelector(".signin-username");
   const signInEmail = document.querySelector(".signin-email");
   const signInPassword = document.querySelector(".signin-password");
@@ -26,9 +27,9 @@ signInForm.addEventListener("submit", (event) => {
     },
     body: JSON.stringify({ username, masterPassword }),
   })
-    // .then((res) => {
-    //   res.json(), (location.href = "/pages/dashboard/dashboard.html");
-    // })
+    .then((res) => {
+      res.json(), (location.href = "../dashboard/dashboard.html");
+    })
     // .then((data) => {
     //   const { token } = data;
 
@@ -70,7 +71,7 @@ signUpForm.addEventListener("submit", (event) => {
     body: JSON.stringify({ username, email, masterPassword }),
   })
     .then((res) => {
-      res.json(), (location.href = "/pages/dashboard/dashboard.html");
+      res.json(), (location.href = "./pages/dashboard/dashboard.html");
     })
     // .then((data) => {
     //   const { token } = data;

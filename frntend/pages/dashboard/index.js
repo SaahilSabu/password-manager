@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector(".card-container");
 const logout = document.querySelector(".logout");
-const createNoteButton = document.querySelector(".new-note");
+const createNoteButton = document.querySelector(".new-password");
 
 const apiUrl = "http://localhost:5000";
 
@@ -14,8 +14,7 @@ logout.addEventListener("click", () => {
 let cardData = [];
 
 createNoteButton.addEventListener("click", () => {
-  location.href = "../createNotes/createNotes.html";
-  // location.href = "/pages/createPassword/createPasswords.html";
+  location.href = "/frntend/pages/createPasswords/createPasswords.html";
 });
 
 const createNotes = (array) => {
@@ -29,7 +28,7 @@ const createNotes = (array) => {
     card.classList.add("card");
     card.id = id;
 
-    const insideHtml = `<div class="card-header"><div class="card-heading">${domain}</div><a href="../updateNotes/updateNotes.html?noteId=${id}"><div class="edit-note"><img src="../../assets/edit-note.svg" alt="" /></div></a></div><div class="username-content">${username}</div><div class="password-content">${password}</div>`;
+    const insideHtml = `<div class="card-header"><div class="card-heading">${domain}</div><a href="../updatePasswords/updatePasswords.html?noteId=${id}"><div class="edit-note"><img src="../../assets/edit-note.svg" alt="" /></div></a></div><div class="username-content">${username}</div><div class="password-content">${password}</div>`;
 
     card.innerHTML = insideHtml;
 
@@ -49,9 +48,7 @@ window.addEventListener("load", () => {
       "Content-Type": "application/json",
     },
   })
-    .then((res) => {
-      res.json(), console.log(res);
-    })
+    .then((res) => res.json())
     .then((data) => {
       cardData = data.data;
       createNotes(data.data);

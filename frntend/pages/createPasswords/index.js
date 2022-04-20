@@ -1,13 +1,13 @@
-const createNoteButton = document.querySelector(".create-note-button");
+const createPasswordButton = document.querySelector(".create-password-button");
 
 const apiUrl = "http://localhost:5000";
 
 // const token = localStorage.getItem("jwt");
 
-createNoteButton.addEventListener("click", () => {
-  const userName = document.querySelector(".create-note-input");
-  const userDomain = document.querySelector(".create-note-heading");
-  const userPassword = document.querySelector(".create-note-password");
+createPasswordButton.addEventListener("click", () => {
+  const userName = document.querySelector(".create-password-input");
+  const userDomain = document.querySelector(".create-password-heading");
+  const userPassword = document.querySelector(".create-password-password");
 
   const username = userName.value;
   const domain = userDomain.value;
@@ -24,14 +24,14 @@ createNoteButton.addEventListener("click", () => {
   })
     .then((res) => {
       res.json(),
-      location.href = "/pages/dashboard/dashboard.html"
+      location.href = "../dashboard/dashboard.html"
     })
     // .then((data) => {
     //   if (data.message) {
     //   }
     // })
     .catch((err) => {
-      alert("Error Creating Note!! Re-try....");
+      alert("Error Creating password!! Re-try....");
       console.log(err);
     });
   // }

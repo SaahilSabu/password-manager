@@ -9,7 +9,7 @@
 body {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(45deg, #ff9ce3, #4ab3ff);
+  background: linear-gradient(45deg, #c42525, #021725);
   overflow: hidden;
   opacity: 0;
   transition: opacity 1s ease;
@@ -33,7 +33,7 @@ body {
   height: 600px;
   border-radius: 50%;
 
-  background: linear-gradient(180deg, #97ff57 0%, #0d99ff 99.99%, #0094ff 100%);
+  background: linear-gradient(180deg, #d8963f 0%, #82c4fa 99.99%, #50a5e2 100%);
   filter: blur(10px);
   transform: rotate(18deg);
   left: -120px;
@@ -49,7 +49,7 @@ body {
   right: -50px;
   bottom: -80px;
 
-  background: linear-gradient(180deg, #ff57d0 0%, #0d99ff 99.99%, #0094ff 100%);
+  background: linear-gradient(180deg, #2e312e 0%, #22e95e 99.99%, #0094ff 100%);
   filter: blur(5px);
   transform: rotate(18deg);
 }
